@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generate your ticket for Coding Conf 2025, the biggest coding conference of the year."
+    />
+    <meta
+      name="keywords"
+      content="coding, conference, ticket generator, Coding Conf 2025"
+    />
+    <meta name="author" content="Kamilia ahmed" />
     <link
       rel="icon"
       type="image/png"
@@ -10,271 +19,99 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Frontend Mentor | Conference ticket generator</title>
-    <style>
-      body {
-        font-family: 'Inconsolata', monospace;
-        color: white;
-      }
-
-      .body {
-        display: flex;
-        justify-content: center;
-        background-image: url('./assets/images/background-desktop.png');
-        background-size: cover;
-        height: auto;
-        min-height: 100vh;
-        position: relative;
-      }
-
-      /* Patterns styles */
-      .patterns {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-image: url('./assets/images/pattern-lines.svg');
-      }
-
-      .pattern-lines {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        z-index: 2;
-      }
-
-      .pattern-squiggly-line-bottom {
-        width: 60%;
-        max-width: 500px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-
-      .pattern-squiggly-line-top {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-
-      .pattern-circle {
-        position: absolute;
-      }
-
-      .pattern-circle.one {
-        top: 0;
-        left: 0;
-        transform: translateY(-50%);
-      }
-
-      .pattern-circle.two {
-        right: 10%;
-        bottom: 25%;
-      }
-
-      .container {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px 0;
-        box-sizing: border-box;
-        z-index: 1;
-      }
-
-      /* Content Styles */
-
-      .sub-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 25px;
-      }
-
-      h1 {
-        font-weight: 800;
-        font-size: 2.5rem;
-        text-align: center;
-      }
-
-      h1 .username {
-        background: linear-gradient(
-          to right,
-          hsl(7, 86%, 67%),
-          hsl(0, 0%, 100%)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-      }
-
-      h6 {
-        color: hsl(252, 6%, 83%);
-        text-align: center;
-        width: 50%;
-      }
-
-      .ticket-email {
-        color: hsl(7, 86%, 67%);
-      }
-
-      .ticket {
-        padding: 20px;
-        background-image: url('./assets/images/pattern-ticket.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 120px;
-        box-sizing: border-box;
-      }
-
-      .ticket-id {
-        transform: rotate(90deg);
-        height: fit-content;
-        width: fit-content;
-        color: hsl(252, 6%, 83%);
-      }
-
-      .ticket-content {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-      }
-
-      .ticket-header {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      .ticket-header img {
-        width: 30px;
-      }
-
-      .ticket-header div div:first-child {
-        font-size: 1.7rem;
-        font-weight: 800;
-      }
-
-      .ticket-header > div {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-      }
-
-      .user-info {
-        display: flex;
-        align-items: flex-end;
-        gap: 5px;
-      }
-
-      .user-info img {
-        width: 50px;
-        border-radius: 10px;
-      }
-
-      .user-data {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 5px;
-      }
-
-      .user-data div:first-child {
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
-      .github {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-      .github img {
-        width: 20px;
-      }
-
-      small {
-        font-size: 12px;
-        color: hsl(252, 6%, 83%);
-      }
-    </style>
+    <title>Coding Conf 2025 Ticket Generator</title>
   </head>
+
   <body>
-    <div class="body">
-      <div class="patterns">
+    <div class="page-wrapper">
+      <!-- Background Patterns -->
+      <div class="background-patterns">
         <img
           src="./assets/images/pattern-squiggly-line-bottom.svg"
-          alt=""
-          srcset=""
-          class="pattern-squiggly-line-bottom"
+          alt="Decorative pattern at the bottom"
+          class="pattern-line-bottom"
         />
         <img
           src="./assets/images/pattern-squiggly-line-top.svg"
-          alt=""
-          srcset=""
-          class="pattern-squiggly-line-top"
+          alt="Decorative pattern at the top"
+          class="pattern-line-top"
         />
         <img
           src="./assets/images/pattern-circle.svg"
-          alt=""
-          srcset=""
-          class="pattern-circle one"
+          alt="Decorative circle pattern"
+          class="pattern-circle pattern-circle--top-left"
         />
         <img
           src="./assets/images/pattern-circle.svg"
-          alt=""
-          srcset=""
-          class="pattern-circle two"
+          alt="Decorative circle pattern"
+          class="pattern-circle pattern-circle--bottom-right"
         />
       </div>
 
-      <div class="container">
-        <!-- logo Section -->
-        <img src="./assets/images/logo-full.svg" alt="" />
+      <!-- Content Section -->
+      <div class="content-container">
+        <img
+          src="./assets/images/logo-full.svg"
+          alt="Coding Conf 2025 logo"
+          class="logo"
+        />
 
-        <!-- Content Section -->
-        <div class="sub-container">
-          <h1>
-            Congrats, <span class="username">username!</span> <br />
+        <!-- Header Section -->
+        <div class="header">
+          <h1 class="content-title">
+            Congrats, <span class="username">Guest</span>! <br />
             Your ticket is ready.
           </h1>
-          <h6>
-            We've emailed your ticket to
-            <span class="ticket-email">email@example.com</span>&nbsp;and will
-            send you updates in the run up to the event.
-          </h6>
 
+          <p class="content-subtitle">
+            We've emailed your ticket to <br />
+            <span class="ticket-email">kamiliaahmed01@gmail.com</span> and will
+            send updates <br />
+            in the run up to the event.
+          </p>
+        </div>
+
+        <!-- Ticket Section -->
+        <div class="ticket-container">
           <div class="ticket">
-            <div class="ticket-content">
-              <div class="ticket-header">
-                <img src="./assets/images/logo-mark.svg" alt="" />
-                <div>
-                  <div>Coding Conf</div>
-                  <div class="date"><small>12/06/2025</small></div>
+            <div class="ticket-background">
+              <img src="./assets/images/pattern-ticket.svg" alt="" srcset="" />
+            </div>
+            <div class="ticket-body">
+              <div class="ticket-content">
+                <div class="ticket-header">
+                  <img src="./assets/images/logo-mark.svg" alt="Logo mark" />
+                  <div>
+                    <div>Coding Conf</div>
+                    <div class="date"><small>12/06/2025</small></div>
+                  </div>
                 </div>
-              </div>
-              <div class="user-info">
-                <img src="./assets/images/image-avatar.jpg" alt="" />
-                <div class="user-data">
-                  <div class="username">username</div>
-                  <div class="github">
-                    <img src="./assets/images/icon-github.svg" alt="" />
-                    <div class="usergithub">github</div>
+
+                <div class="user-info">
+                  <img
+                    src="./assets/images/image-avatar.jpg"
+                    alt="User Avatar"
+                    id="avatar"
+                  />
+                  <div class="user-data">
+                    <div class="username">Guest</div>
+                    <div class="github">
+                      <img
+                        src="./assets/images/icon-github.svg"
+                        alt="GitHub icon"
+                      />
+                      <div class="usergithub">github.com/unknown</div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="ticket-id">#15602</div>
             </div>
-            <div class="ticket-id">#15602</div>
           </div>
         </div>
       </div>
@@ -283,10 +120,12 @@
     <script>
       const usernameElements = document.querySelectorAll('.username');
       const githubElement = document.querySelector('.usergithub');
+      const avatarElement = document.querySelector('#avatar');
       const dateElement = document.querySelector('.date small');
 
       const username = localStorage.getItem('fullName') || 'Guest';
       const github = localStorage.getItem('github') || 'github.com/unknown';
+      const avatar = localStorage.getItem('avatar');
 
       const formattedDate = new Date().toLocaleDateString('en-US', {
         month: 'long',
@@ -295,9 +134,15 @@
       });
 
       usernameElements.forEach((el) => (el.textContent = username));
-      usernameElements[0].textContent += '!';
       githubElement.textContent = github;
       dateElement.textContent = formattedDate;
+
+      // Set avatar image src
+      if (avatar) {
+        avatarElement.src = avatar;
+      } else {
+        avatarElement.src = 'default-avatar.png'; // Fallback if no avatar is uploaded
+      }
     </script>
   </body>
 </html>

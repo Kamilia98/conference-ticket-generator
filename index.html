@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generate your ticket for Coding Conf 2025, the biggest coding conference of the year."
+    />
+    <meta
+      name="keywords"
+      content="coding, conference, ticket generator, Coding Conf 2025"
+    />
+    <meta name="author" content="Kamilia ahmed" />
     <link
       rel="icon"
       type="image/png"
@@ -10,279 +19,152 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Frontend Mentor | Conference ticket generator</title>
-    <style>
-      body {
-        font-family: 'Inconsolata', monospace;
-        color: white;
-      }
-
-      .body {
-        display: flex;
-        justify-content: center;
-        background-image: url('./assets/images/background-desktop.png');
-        background-size: cover;
-        height: auto;
-        min-height: 100vh;
-        position: relative;
-      }
-
-      /* Patterns styles */
-      .patterns {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-image: url('./assets/images/pattern-lines.svg');
-      }
-
-      .pattern-lines {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        z-index: 2;
-      }
-
-      .pattern-squiggly-line-bottom {
-        width: 60%;
-        max-width: 500px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-
-      .pattern-squiggly-line-top {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-
-      .pattern-circle {
-        position: absolute;
-      }
-
-      .pattern-circle.one {
-        top: 0;
-        left: 0;
-        transform: translateY(-50%);
-      }
-
-      .pattern-circle.two {
-        right: 10%;
-        bottom: 25%;
-      }
-
-      .container {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px 0;
-        box-sizing: border-box;
-        z-index: 1;
-      }
-
-      /* Content Styles */
-
-      .sub-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-      }
-
-      h1 {
-        font-weight: 800;
-        font-size: 2.5rem;
-        text-align: center;
-      }
-
-      h6 {
-        color: hsl(252, 6%, 83%);
-        text-align: center;
-      }
-
-      /* Form Styles */
-      #ticketForm {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .form-input {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .form-input input {
-        font-family: 'Inconsolata', monospace;
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: solid 1px hsl(245, 19%, 35%);
-        border-radius: 5px;
-        color: white;
-        padding: 10px;
-      }
-
-      input[type='file'] {
-        display: none;
-      }
-
-      .info {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-
-      .upload-container {
-        text-align: center;
-        border: 2px dashed hsl(245, 19%, 35%);
-        border-radius: 8px;
-        padding: 20px;
-        width: 300px;
-        background-color: rgba(255, 255, 255, 0.1);
-        cursor: pointer;
-      }
-
-      .upload-label {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        cursor: pointer;
-        color: hsl(252, 6%, 83%);
-      }
-
-      .upload-icon {
-        font-size: 40px;
-        color: hsl(7, 88%, 67%);
-        background-color: transparent;
-        border: solid 1px hsl(245, 19%, 35%);
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-      }
-
-      small {
-        font-size: 12px;
-        color: hsl(252, 6%, 83%);
-      }
-
-      input[type='submit'] {
-        color: hsl(248, 70%, 10%);
-        font-weight: bold;
-        background-color: hsl(7, 88%, 67%);
-        border: 0;
-        padding: 10px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        border-radius: 10px;
-      }
-
-      .error-message {
-        color: hsl(7, 88%, 67%);
-        font-size: 12px;
-        opacity: 0;
-        height: 12px;
-      }
-    </style>
+    <title>Coding Conf 2025 Ticket Generator</title>
   </head>
   <body>
-    <div class="body">
-      <div class="patterns">
+    <div class="page-wrapper">
+      <!-- Background Patterns -->
+      <div class="background-patterns">
         <img
           src="./assets/images/pattern-squiggly-line-bottom.svg"
-          alt=""
-          srcset=""
-          class="pattern-squiggly-line-bottom"
+          alt="Decorative pattern at the bottom"
+          class="pattern-line-bottom"
         />
         <img
           src="./assets/images/pattern-squiggly-line-top.svg"
-          alt=""
-          srcset=""
-          class="pattern-squiggly-line-top"
+          alt="Decorative pattern at the top"
+          class="pattern-line-top"
         />
         <img
           src="./assets/images/pattern-circle.svg"
-          alt=""
-          srcset=""
-          class="pattern-circle one"
+          alt="Decorative circle pattern"
+          class="pattern-circle pattern-circle--top-left"
         />
         <img
           src="./assets/images/pattern-circle.svg"
-          alt=""
-          srcset=""
-          class="pattern-circle two"
+          alt="Decorative circle pattern"
+          class="pattern-circle pattern-circle--bottom-right"
         />
       </div>
 
-      <div class="container">
-        <!-- logo Section -->
-        <img src="./assets/images/logo-full.svg" alt="" />
+      <!-- Content Section -->
+      <div class="content-container">
+        <!-- Logo Section -->
+        <img
+          src="./assets/images/logo-full.svg"
+          alt="Coding Conf 2025 logo"
+          class="logo"
+        />
 
-        <!-- Content Section -->
-        <div class="sub-container">
-          <h1>Your journey to Coding Conf 2025 Starts here!</h1>
-          <h6>Secure your spot at next year's biggest coding conference.</h6>
-
-          <form id="ticketForm">
-            <div class="form-input">
-              <label for="file-input">Upload Avatar</label>
-              <div class="upload-container">
-                <label for="file-input" class="upload-label">
-                  <div class="upload-icon">
-                    <img src="./assets/images/icon-upload.svg" alt="" />
-                  </div>
-                  <p>Drag and drop or click to upload</p>
-                  <input id="file-input" type="file" accept=".jpg,.png" />
-                </label>
-              </div>
-              <div class="info">
-                <img src="./assets/images/icon-info.svg" alt="" />
-                <small>Upload your photo JPG or PNG</small>
-              </div>
-              <span id="file-error" class="error-message"></span>
-            </div>
-            <div class="form-input">
-              <label for="full-name">Full name</label>
-              <input id="full-name" type="text" />
-              <span id="name-error" class="error-message"></span>
-            </div>
-            <div class="form-input">
-              <label for="email">Email address</label>
-              <input id="email" type="email" placeholder="example@email.com" />
-              <span id="email-error" class="error-message"></span>
-            </div>
-            <div class="form-input">
-              <label for="github">Github Username</label>
-              <input id="github" type="text" placeholder="@username" />
-              <span id="github-error" class="error-message"></span>
-            </div>
-            <input type="submit" value="Generate my ticket" />
-          </form>
+        <!-- Header Section -->
+        <div class="header">
+          <h1 class="content-title">
+            Your journey to Coding Conf 2025 Starts here!
+          </h1>
+          <p class="content-subtitle">
+            Secure your spot at next year's biggest coding conference.
+          </p>
         </div>
+
+        <!-- Ticket Form -->
+        <form id="ticketForm" class="ticket-form">
+          <div class="form-group">
+            <label for="file-input">Upload Avatar</label>
+            <div class="upload-container">
+              <label for="file-input">
+                <img
+                  src="./assets/images/icon-upload.svg"
+                  alt="Upload icon"
+                  class="upload-icon"
+                />
+                <p>Drag and drop or click to upload</p>
+                <input id="file-input" type="file" accept=".jpg,.png" hidden />
+              </label>
+            </div>
+            <small class="form-error" id="file-error"
+              >Please upload a valid image.</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="full-name">Full name</label>
+            <input
+              id="full-name"
+              type="text"
+              class="form-input"
+              placeholder="Kamilia ahmed"
+            />
+            <small class="form-error" id="name-error"
+              >Full name is required.</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              type="email"
+              class="form-input"
+              placeholder="kamiliaahmed01@email.com"
+            />
+            <small class="form-error" id="email-error"
+              >Enter a valid email address.</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="github">GitHub Username</label>
+            <input
+              id="github"
+              type="text"
+              class="form-input"
+              placeholder="@kamilia98"
+            />
+            <small class="form-error" id="github-error"
+              >GitHub username is required.</small
+            >
+          </div>
+
+          <button type="submit" class="form-submit">Generate my ticket</button>
+        </form>
       </div>
     </div>
 
     <script>
       const form = document.getElementById('ticketForm');
-      form.addEventListener('submit', (event) => {
+
+      document.getElementById('file-input').addEventListener('input', () => {
+        const fileInput = document.getElementById('file-input');
+        const file = fileInput.files[0];
+
+        if (file && file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = function () {
+            const avatarBase64 = reader.result;
+            const uploadIcon = document.querySelector('.upload-icon');
+            if (uploadIcon) {
+              uploadIcon.src = avatarBase64;
+            }
+            uploadIcon.style.width = '100px';
+            uploadIcon.nextElementSibling.style.display = 'none';
+          };
+          reader.readAsDataURL(file);
+        } else {
+          alert('Please select a valid image file.');
+        }
+      });
+
+      form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        const errorMessages = document.querySelectorAll('.error-message');
+        const errorMessages = document.querySelectorAll('.form-error');
         errorMessages.forEach((error) => (error.style.opacity = '0'));
-        console.log(document.getElementById('file-input'));
-        // Get form values
+
         const avatar = document.getElementById('file-input').files[0];
         const fullName = document.getElementById('full-name').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -292,7 +174,6 @@
         let isValid = true;
 
         // Validate avatar
-        console.log(avatar);
         if (!avatar) {
           const fileError = document.getElementById('file-error');
           fileError.textContent = 'Please upload your avatar.';
@@ -325,11 +206,17 @@
         }
 
         if (isValid) {
-          localStorage.setItem('avatar', avatar.name);
-          localStorage.setItem('fullName', fullName);
-          localStorage.setItem('email', email);
-          localStorage.setItem('github', github);
-          window.location.href = 'ticket.html';
+          // Convert avatar to Base64 string
+          const reader = new FileReader();
+          reader.onload = function () {
+            const avatarBase64 = reader.result;
+            localStorage.setItem('avatar', avatarBase64);
+            localStorage.setItem('fullName', fullName);
+            localStorage.setItem('email', email);
+            localStorage.setItem('github', github);
+            window.location.href = 'ticket.html';
+          };
+          reader.readAsDataURL(avatar);
         }
       });
 
