@@ -52,87 +52,98 @@
         />
       </div>
 
-      <!-- Content Section -->
-      <div class="content-container">
+      <!-- Main Content -->
+      <main class="content-container">
         <!-- Logo Section -->
-        <img
-          src="./assets/images/logo-full.svg"
-          alt="Coding Conf 2025 logo"
-          class="logo"
-        />
+        <section class="logo-section">
+          <img
+            src="./assets/images/logo-full.svg"
+            alt="Coding Conf 2025 logo"
+            class="logo"
+          />
+        </section>
 
         <!-- Header Section -->
-        <div class="header">
+        <header class="header">
           <h1 class="content-title">
             Your journey to Coding Conf 2025 Starts here!
           </h1>
           <p class="content-subtitle">
             Secure your spot at next year's biggest coding conference.
           </p>
-        </div>
+        </header>
 
         <!-- Ticket Form -->
-        <form id="ticketForm" class="ticket-form">
-          <div class="form-group">
-            <label for="file-input">Upload Avatar</label>
-            <div class="upload-container">
-              <label for="file-input">
-                <img
-                  src="./assets/images/icon-upload.svg"
-                  alt="Upload icon"
-                  class="upload-icon"
-                />
-                <p>Drag and drop or click to upload</p>
-                <input id="file-input" type="file" accept=".jpg,.png" hidden />
-              </label>
+        <section class="ticket-form-section">
+          <form id="ticketForm" class="ticket-form">
+            <div class="form-group">
+              <label for="file-input">Upload Avatar</label>
+              <div class="upload-container">
+                <label for="file-input">
+                  <img
+                    src="./assets/images/icon-upload.svg"
+                    alt="Upload icon"
+                    class="upload-icon"
+                  />
+                  <p>Drag and drop or click to upload</p>
+                  <input
+                    id="file-input"
+                    type="file"
+                    accept=".jpg,.png"
+                    hidden
+                  />
+                </label>
+              </div>
+              <small class="form-error" id="file-error"
+                >Please upload a valid image.</small
+              >
             </div>
-            <small class="form-error" id="file-error"
-              >Please upload a valid image.</small
-            >
-          </div>
 
-          <div class="form-group">
-            <label for="full-name">Full name</label>
-            <input
-              id="full-name"
-              type="text"
-              class="form-input"
-              placeholder="Kamilia ahmed"
-            />
-            <small class="form-error" id="name-error"
-              >Full name is required.</small
-            >
-          </div>
+            <div class="form-group">
+              <label for="full-name">Full name</label>
+              <input
+                id="full-name"
+                type="text"
+                class="form-input"
+                placeholder="Kamilia ahmed"
+              />
+              <small class="form-error" id="name-error"
+                >Full name is required.</small
+              >
+            </div>
 
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input
-              id="email"
-              type="email"
-              class="form-input"
-              placeholder="kamiliaahmed01@email.com"
-            />
-            <small class="form-error" id="email-error"
-              >Enter a valid email address.</small
-            >
-          </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input
+                id="email"
+                type="email"
+                class="form-input"
+                placeholder="kamiliaahmed01@email.com"
+              />
+              <small class="form-error" id="email-error"
+                >Enter a valid email address.</small
+              >
+            </div>
 
-          <div class="form-group">
-            <label for="github">GitHub Username</label>
-            <input
-              id="github"
-              type="text"
-              class="form-input"
-              placeholder="@kamilia98"
-            />
-            <small class="form-error" id="github-error"
-              >GitHub username is required.</small
-            >
-          </div>
+            <div class="form-group">
+              <label for="github">GitHub Username</label>
+              <input
+                id="github"
+                type="text"
+                class="form-input"
+                placeholder="@kamilia98"
+              />
+              <small class="form-error" id="github-error"
+                >GitHub username is required.</small
+              >
+            </div>
 
-          <button type="submit" class="form-submit">Generate my ticket</button>
-        </form>
-      </div>
+            <button type="submit" class="form-submit">
+              Generate my ticket
+            </button>
+          </form>
+        </section>
+      </main>
     </div>
 
     <script>

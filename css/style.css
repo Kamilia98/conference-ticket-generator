@@ -105,6 +105,11 @@ body {
 }
 
 /* Form Styles */
+.ticket-form-section {
+  display: flex;
+  justify-content: center;
+}
+
 .ticket-form {
   width: 70%;
   display: flex;
